@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list';
+  title = 'To do list';
+
+  getFooter() {
+    return '© Lista zadań, All rights reserved.';
+  }
+
+  getDate() {
+    return new Date();
+  }
 }

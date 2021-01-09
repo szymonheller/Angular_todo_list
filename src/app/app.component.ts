@@ -6,13 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'To do list';
+  // title = 'To do list';
 
-  getFooter() {
-    return '© Lista zadań, All rights reserved.';
+  // getFooter() {
+  //   return '© Lista zadań, All rights reserved.';
+  // }
+
+  // getDate() {
+  //   return new Date();  
+  // }
+
+  config: { [key: string]: string } = null;
+
+  constructor() {
+    setTimeout(() => {
+      this.config = {
+        title: 'Lista zadań',
+        footer: '© Lista zadań zbudowana w Angularze',
+        date: new Date().toDateString()
+      }
+    }, 500);
+
   }
 
-  getDate() {
-    return new Date();
-  }
+
 }

@@ -17,7 +17,7 @@ export class AppComponent {
   //   return new Date();  
   // }
 
-  taskName: string;
+
 
   config: { [key: string]: string } = null;
 
@@ -54,15 +54,11 @@ export class AppComponent {
     this.tasks = [];
   }
 
-  onKeyUp(event: KeyboardEvent) {
-    const target = event.target as HTMLInputElement;
-    this.taskName = target.value;
-  }
 
-  createTask() {
+  createTask(name: string, deadline: string) {
     const task: Task = {
-      name: this.taskName,
-      deadline: '2020-02-02',
+      name,
+      deadline,
       done: false,
     }
     this.tasks.push(task);

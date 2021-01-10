@@ -1,3 +1,4 @@
+import { ClassField } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Task } from './task';
 
@@ -16,7 +17,6 @@ export class AppComponent {
   // getDate() {
   //   return new Date();  
   // }
-
 
 
   config: { [key: string]: string } = null;
